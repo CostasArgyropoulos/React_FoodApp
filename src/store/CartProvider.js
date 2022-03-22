@@ -15,13 +15,13 @@ const cartReducer = (state, action) => {
             totalAmount: updatedTotalAmount
         };
     }
-    if(action.type === 'REMOVE'){
+    // if(action.type === 'REMOVE'){
 
-    }
+    // }
     return defaultCartState;
 };
 
-const CartProvider = props => {
+const CartProvider = (props) => {
     const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
 
     const addItemToCartHandler = item => {
